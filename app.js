@@ -13,7 +13,9 @@ app.put('/', (req, res)=>{
     res.sendFile(path.join(__dirname, 'pages/index.html'))
 })
 
-
+app.delete('/', (req, res)=>{
+    res.json({good : "yep"})
+})
 
 
 app.listen(port,()=>{
