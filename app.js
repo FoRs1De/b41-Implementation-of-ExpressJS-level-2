@@ -17,6 +17,10 @@ app.get('/test-ejs', (req, res)=>{
     res.render('./index.ejs', { myTitle: 'my first title' })
 })
 
+app.get('/test-ejs2', (req, res)=>{
+    res.render('./users.ejs', { users : ['Bob', 'John', 'Jane' ]})
+})
+
 app.listen(port,()=>{
   console.log(`http://localhost:${port}/`);
 });
