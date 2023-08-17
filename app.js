@@ -4,6 +4,7 @@ const app = express();
 const homeRouter = require('./routers/homeRouter')
 const ejsRouter = require('./routers/ejsRouter')
 const formRouter = require('./routers/formRouter')
+const numberRouter = require('./routers/numberRouter')
 const bodyParser = require('body-parser')
 
 const port = process.env.PORT || 3000
@@ -17,6 +18,7 @@ app.set('view engine', 'ejs');
 app.use('/home', homeRouter)
 app.use('/test-ejs', ejsRouter)
 app.use('/form', formRouter)
+app.use('/number', numberRouter)
 
 app.listen(port,()=>{
   console.log(`http://localhost:${port}/`);
