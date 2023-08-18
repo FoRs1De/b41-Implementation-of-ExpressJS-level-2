@@ -9,14 +9,12 @@ const ex10and11 = async (req, res, next) => {
             if (err) throw new Error('Unable to store');
             console.log('Saved!');
         });
+
         return res.status(200).send(data)
+
     }catch(error){
         return next(error)
     }
-
 }
-
-// Via the query in the previous exercise write the result of the query
-//  in a posts.json file.
 
 module.exports = {ex10and11}
